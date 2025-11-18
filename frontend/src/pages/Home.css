@@ -1,0 +1,188 @@
+/* ===== RESET DO CONTAINER PADRÃO ===== */
+.content {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILO GERAL ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* NAVBAR PERSONALIZADA */
+.navbar-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 60px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-home .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #526b5c;
+    font-size: 18px;
+}
+
+.navbar-home ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-home ul li a {
+    text-decoration: none;
+    color: #526b5c;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.navbar-home ul li a.active {
+    border-bottom: 2px solid #526b5c;
+}
+
+.navbar-home ul li a:hover {
+    opacity: 0.7;
+}
+
+/* CONTAINER PRINCIPAL */
+.home-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+/* CONTEÚDO TEXTO + IMAGENS */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+/* TEXTO */
+.home-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-intro {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 450px;
+    text-align: left;
+}
+
+.btn-cadastro {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #526b5c;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-cadastro:hover {
+    background-color: #3e5548;
+    box-shadow: 0 0 12px rgba(82, 107, 92, 0.6);
+}
+
+/* IMAGENS */
+.home-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.imagens-galeria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.imagens-galeria img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagens-galeria img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .home-inner {
+        padding: 0 20px;
+    }
+
+    .home-content {
+        gap: 20px;
+    }
+
+    .imagens-galeria img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .texto-intro {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .imagens-galeria {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

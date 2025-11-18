@@ -1,0 +1,172 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.cadastro-page {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #fff;
+}
+
+/* IMAGEM DE FUNDO */
+.cadastro-left {
+    flex: 1;
+    background-image: url("/img/folhagem_cadastro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cadastro-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.voltar-home {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s ease;
+}
+.voltar-home:hover {
+    opacity: 0.8;
+}
+
+.cadastro-header {
+    background-color: #526b5c;
+    color: white;
+    padding: 50px 20px 30px 20px;
+    text-align: center;
+    position: relative;
+}
+.cadastro-header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+.cadastro-header p {
+    margin-top: 8px;
+    font-size: 17px;
+    color: #f0f0f0;
+}
+
+.cadastro-form-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.cadastro-form {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #526b5c;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+.form-group input:focus {
+    border-color: #526b5c;
+    box-shadow: 0 0 4px rgba(82, 107, 92, 0.3);
+}
+
+.cadastro-form button {
+    width: 100%;
+    background-color: #526b5c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.cadastro-form button:hover {
+    background-color: #3e5548;
+    box-shadow: 0 0 10px rgba(82, 107, 92, 0.5);
+}
+
+.cadastro-form p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+.cadastro-form a {
+    color: #526b5c;
+    font-weight: 600;
+    text-decoration: none;
+}
+.cadastro-form a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .cadastro-page {
+        flex-direction: column;
+    }
+
+    .cadastro-left {
+        height: 40vh;
+    }
+
+    .cadastro-header {
+        padding: 40px 20px 25px;
+    }
+
+    .cadastro-header h1 {
+        font-size: 34px;
+    }
+
+    .cadastro-header p {
+        font-size: 16px;
+    }
+
+    .cadastro-form-area {
+        padding: 25px 20px 35px;
+    }
+}
