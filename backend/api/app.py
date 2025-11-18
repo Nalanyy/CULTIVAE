@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 from config import Config
 from banco_dados.db_sqlite import bd
-from modelos.user import User
+from models.user import User
 
 # Blueprints
 from blueprints.home.home_bp import home_bp
